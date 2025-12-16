@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Environment variables
+.env
+*.env
+Open_ai.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Data files (опционально - можно раскомментировать если не хотите загружать задачи)
+# data/tasks.json
+
+# Parsing scripts (временные скрипты для парсинга)
+parse_docx.py
+parse_docx_improved.py
+final_parser.py
+simple_parser.py
+fix_numbering.py
+add_task.py
+add_additional_tasks.py
+analyze_structure.py
+check_exact_text.py
+check_server.py
+check_task_numbers.py
+complete_parser.py
+debug_parsing.py
+inspect_docx.py
+test_api.py
+test_gemini.py
+test_openai_key.py
+test_server.py
+verify_tasks.py
+list_gemini_models.py
+

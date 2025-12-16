@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка ответов - Clinical AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Инфекционные болезни Устный экзамен КАЗНМУ</h1>
+        </header>
+
+        <main>
+            <!-- Секция выбора задачи -->
+            <section class="task-select-section">
+                <h2>Выберите задачу</h2>
+                <select id="task-select" class="task-select">
+                    <option value="">Загрузка задач...</option>
+                </select>
+            </section>
+
+            <!-- Секция с задачей -->
+            <section class="task-section">
+                <h2>Задача</h2>
+                <div id="task-content" class="content-box">
+                    <p class="loading">Выберите задачу из списка выше</p>
+                </div>
+            </section>
+
+            <!-- Секция для ввода ответа -->
+            <section class="answer-section">
+                <h2>Ваш ответ</h2>
+                <textarea 
+                    id="answer-input" 
+                    placeholder="Введите ваш ответ здесь. Ответ должен включать:\n1. Обоснование диагноза\n2. Составление плана диагностики\n3. Составление плана лечения"
+                    rows="15"
+                ></textarea>
+                <button id="check-button" class="check-btn">Проверить ответ</button>
+            </section>
+
+            <!-- Секция с результатами проверки -->
+            <section id="results-section" class="results-section" style="display: none;">
+                <h2>Результаты проверки</h2>
+                <div id="results-content" class="content-box">
+                    <!-- Результаты будут здесь -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Made by Касымжанов "Gazabowow" Алимжан</p>
+                <p>
+                    Inst <a href="https://www.instagram.com/gzbww/" target="_blank" rel="noopener noreferrer">@gzbww</a>
+                </p>
+                <p class="footer-disclaimer">
+                    Доступ и использование данного сайта запрещены лицам, демонстрирующим негативное отношение к его создателю. 
+                    Подписка на Instagram обязательна. Несогласные могут не задерживаться.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimer-modal" class="modal">
+        <div class="modal-content">
+            <h2>⚠️ Внимание!</h2>
+            <div class="disclaimer-text">
+                <p><strong>Доступ и использование данного сайта запрещены лицам, демонстрирующим негативное отношение к его создателю.</strong></p>
+                <p>Подписка на Instagram обязательна. Несогласные могут не задерживаться.</p>
+                <p class="creator-info">
+                    Создатель: Касымжанов "Gazabowow" Алимжан<br>
+                    Instagram: <a href="https://www.instagram.com/gzbww/" target="_blank" rel="noopener noreferrer">@gzbww</a>
+                </p>
+            </div>
+            <div class="modal-buttons">
+                <button id="accept-button" class="btn-accept">Я согласен и обязуюсь соблюдать условия</button>
+                <button id="decline-button" class="btn-decline">Не согласен</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
