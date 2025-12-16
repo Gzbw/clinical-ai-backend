@@ -80,6 +80,13 @@ def format_task_for_display(task: Dict) -> str:
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
+    """Главная страница - редирект на статический файл"""
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/static/index.html")
+
+
+@app.get("/static/index.html", response_class=HTMLResponse)
+async def read_index():
     """Главная страница"""
     html_path = Path("static/index.html")
     if html_path.exists():
@@ -355,5 +362,6 @@ async def check_answer(request: AnswerRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
